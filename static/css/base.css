@@ -1,0 +1,321 @@
+.ant-col {
+    position: relative;
+    min-height: 1px;
+}
+.ant-row-flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+.icon {
+    display: inline-block;
+    color: inherit;
+    font-style: normal;
+    line-height: 0;
+    text-align: center;
+    text-transform: none;
+    vertical-align: -0.125em;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+    width: 100%;
+    height: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+        "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variant: tabular-nums;
+    line-height: 1;
+    background-color: #fff;
+    font-feature-settings: "tnum", "tnum";
+    overflow: hidden;
+}
+[tabindex="-1"]:focus {
+    outline: none !important;
+}
+hr {
+    border: none;
+    border-top: 1px solid #c3c3c3;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+a {
+    color: #1890ff;
+    text-decoration: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: color 0.3s;
+    -webkit-text-decoration-skip: objects;
+}
+a:hover {
+    color: #40a9ff;
+}
+a:active {
+    color: #096dd9;
+}
+a:active,
+a:hover {
+    text-decoration: none;
+    outline: 0;
+}
+a[disabled] {
+    color: rgba(0, 0, 0, 0.25);
+    cursor: not-allowed;
+    pointer-events: none;
+}
+output {
+    display: inline-block;
+}
+summary {
+    display: list-item;
+}
+template {
+    display: none;
+}
+[hidden] {
+    display: none !important;
+}
+.ant-layout {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    /* min-height: 0; */
+    background: #f0f2f5;
+}
+.flex {
+    flex: auto;
+    /* min-height: 0; */
+}
+.ant-layout-sider {
+    position: relative;
+    min-width: 0;
+    transition: all 0.2s;
+}
+
+.page-header {
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+    line-height: 0;
+    height: 30px;
+    background: #d8d8d8;
+}
+.page-header__left {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.page-header__right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.page-header__button {
+    padding: 0;
+    margin: 0 3px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    -webkit-user-select: none;
+    user-select: none;
+    color: #303030;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.page-header__button > span {
+    font-size: 10px;
+}
+.page-header__button > i {
+    transform: scale(0.8);
+    margin: -4px;
+    padding: 3px;
+}
+.page-header__button:hover > i {
+    transform: scale(0.85);
+}
+.page-header__button:active > i {
+    transform: scale(0.8);
+}
+.page-header__button:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.page-body {
+    flex-direction: row;
+    height: calc(100% - 30px);
+}
+.page-body__left {
+    flex: 0 0 200px;
+    max-width: 200px;
+    min-width: 200px;
+    width: 200px;
+    border-right: 1px solid #c3c3c3;
+}
+.mouse-info {
+    width: 100%;
+    height: 130px;
+    background-color: rgb(194, 230, 253);
+    line-height: 20px;
+}
+.page-body__workspace {
+    flex-direction: column;
+    height: 100%;
+    width: 0px;
+    /* https://www.jianshu.com/p/727f5826be9d */
+}
+.page-body__right {
+    height: 100%;
+    flex: 0 0 300px;
+    max-width: 300px;
+    min-width: 300px;
+    width: 300px;
+    border-left: 1px solid #c3c3c3;
+}
+.page-body__output {
+    height: 200px;
+    width: calc(100% - 10px);
+    margin: 5px;
+    resize: none;
+}
+.workspace {
+    width: 0px;
+}
+.workspace__header-player-group {
+    height: 54px;
+    line-height: 0;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #c3c3c3;
+}
+.workspace__main {
+    position: relative;
+    height: 0px;
+    /* https://www.jianshu.com/p/727f5826be9d */
+    z-index: 10;
+}
+.workspace__canvas-wrapper {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    margin: 5px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    position: relative;
+}
+.workspace__canvas-box {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: white;
+    /* overflow: hidden; */
+}
+.workspace__frame {
+    /* max-width: 100%;
+    max-height: 100%; */
+    height: 100%;
+    /* width: 100%; */
+}
+.workspace__color-water {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    opacity: 0.7;
+}
+.workspace__mask-canvas {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    opacity: 0;
+}
+.workspace__color-canvas {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    /* max-width: 100%;
+    max-height: 100%; */
+    height: 100%;
+    opacity: 0.7;
+}
+.workspace__cursor {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0.7;
+}
+.workspace__bottom-group {
+    height: 120px;
+}
+.workspace__frames-info-highcharts {
+    transform: translateY(-45%);
+    max-width: 100%;
+    min-width: 100%;
+    height: 240px;
+    z-index: -1;
+}
+.workspace__frames-info-highcharts svg > .highcharts-yaxis-grid > path:last-child {
+    opacity: 0;
+}
+.workspace__frames-info-highcharts svg > .highcharts-yaxis-labels > text:last-child {
+    opacity: 0;
+}
+.workspace__frames-info-highcharts svg > g.highcharts-plot-lines-0 {
+    transform: scaleY(0.5) translateY(85%);
+}
+.ann-label__item {
+    display: flex;
+    width: calc(100% - 10px);
+    margin: 5px;
+    border: grey 1px solid;
+    border-left-width: 10px;
+    padding: 5px;
+}
+.ann-label__item.active {
+    border-color: royalblue;
+}
+.ann-label__item .ann-label__color {
+    flex: none;
+    height: 30px;
+    width: 30px;
+    background-color: #4e4e4e;
+    display: inline;
+}
+.ann-label__item .ann-label__name {
+    flex: none;
+    margin: 5px;
+    width: 60px;
+}
+.ann-label__item .ann-label__id {
+    flex: none;
+    margin: 5px;
+    width: 30px;
+}

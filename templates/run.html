@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="{% static 'js/first.js' %}" type="text/javascript"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $("#aj").click(function(){
+            $.post("/add/",{}, function(ret){
+                $("#imga").attr('src',"data:image/png;base64,"+ret);
+            })
+          });
+        });
+    </script>
+</head>
+<body>
+<h1>Test</h1>
+<input type="button" value="switch" id="aj">
+<br>
+<img src="{% url 'image' %}" alt="aaa" id="imga"/>
+</body>
+</html>
